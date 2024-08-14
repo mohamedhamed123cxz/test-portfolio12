@@ -1,0 +1,106 @@
+/* =======================
+ table of contents
+==========================
+1-Left section 
+2-right section
+
+*/
+
+
+
+/* =======================
+    1-Header design
+========================== */
+ .left-section{
+    flex: 1;
+    width: 50%; /* تعديل العرض ليكون 50% */
+    padding-right: 2rem;
+    
+}
+.border{
+    border: 1px red solid;
+}
+
+.first-parent img{
+    width: 152px;
+    border-radius: 50%;
+    border: 1px solid darkorange;
+    padding: 1px;
+    box-shadow: 2px 2px 40px rgba(203,200,200,0.586) inset;
+}
+
+.first-parent div{
+    /* gap: 0.6rem; */
+    color: var(--blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    
+}
+
+
+.second-parent h1{
+    line-height: 3.3rem;
+    font-size: 2.85rem;
+    font-weight: 600;
+    margin: 24px  0;
+    color: var(--title);
+    /* width: 101%; */
+
+}
+.second-parent p{
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--subtitle);
+    /* width: 75%; */
+}
+
+
+.third-parent{
+    color: var(--subtitle);
+    font-size: 1.5rem;
+
+}
+.third-parent div:hover{
+    font-size: 1.6rem;
+    transition: 0.3s;
+    color: var(--icon-hover);
+    cursor: pointer;
+}
+.right-section {
+    flex: 1;
+    width: 50%; /* تعديل العرض ليكون 50% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.developerAnimation {
+    width: 100%; /* استخدام 100% من عرض الأب */
+    height: auto;
+    max-width: 600px; /* زيادة الحجم الأقصى */
+    margin: 0 auto;
+    display: block;
+    transform: translate(0, 0); /* إزالة الـ translate */
+}
+ .light .second-parent h1 {
+    color: var(--title);
+  } 
+  
+   .light .second-parent p {
+    color: var(--subtitle);
+  } 
+
+
+@media (max-width: 1250px) {
+    .left-section1, .right-section {
+        width: 100%;
+    }
+    .right-section {
+        display: none;
+    }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+    .developerAnimation {
+        max-width: 400px; /* تقليل الحجم قليلاً للشاشات المتوسطة */
+    }
+}

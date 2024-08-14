@@ -1,0 +1,30 @@
+footer ul li a {
+    color: var(--subtitle);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+footer ul li a:hover {
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+footer p{
+    color:rgb(113, 113, 112);
+}
+
+
+
+
+@media (max-width: 800px) {
+    footer {
+        flex-direction: column;
+        gap: 2rem;
+        /* align-items: center; */
+        /* padding: 1rem; */
+      
+
+    }
+    
+}

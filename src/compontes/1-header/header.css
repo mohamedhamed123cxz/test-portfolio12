@@ -1,0 +1,162 @@
+/* =======================
+ table of contents
+==========================
+1-Header design
+2-modal ==pop up 
+3-Button & Icon
+4-responsive design
+*/
+
+
+
+
+header nav{
+    background-color: var(--bgheader);
+    padding: 0.77rem 1.6rem;
+    border-radius: 55px;
+    box-shadow: 1px 1px 40px #2323242a;
+    margin-right: 4px;
+}
+
+header nav ul li a{
+    color: var(--title);
+    font-size: 0.88rem;
+    font-weight: 500;
+    opacity: 0.9;
+    /* color: white; */
+
+}
+ /* =======================
+    1-Header design
+========================== */
+header nav ul li a:hover{
+    color: var(--blue);
+    opacity: 1;
+    font-size: 0.9rem;
+}
+header .menu{
+    display: none;
+    
+}
+.light header nav ul li a {
+    color: var(--title);
+  }
+  
+  .light header .icon-menu, .light header .mode {
+    background-color: var(--bgheader);
+    color: var(--subtitle);
+  }
+
+
+
+
+/* =======================
+   2-modal ==pop up 
+========================== */
+
+
+header .fixed{
+    position: fixed;
+    inset: 0;
+    
+    z-index: 11;
+    background-color: rgba(40,40,48,0.91);
+    backdrop-filter: blur(4px);
+
+}
+
+@keyframes mymove {
+    0% {scale: 0}
+    60% {scale: 1.2;}
+    100% {scale: 1;}
+    
+}
+
+
+header .fixed ul.modal{
+    animation:mymove 0.77s 1 ;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--secondry);
+}
+
+header .fixed .modal li{
+    border-bottom:  1px solid var(--border);
+    padding-bottom: 0.77rem;
+    padding-top: 0.5rem;
+}
+header .fixed .modal li:first-child{
+    text-align: right;
+    border: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.77rem;
+    margin-bottom: -2rem;
+
+
+}
+header .fixed .modal li:last-child{
+    border: none;
+}
+header .fixed .modal li a{
+    font-size: 1rem;
+    color: white;
+}
+
+
+/* =======================
+   3-Button & Icon
+========================== */
+header .icon-menu , header .mode{
+    background-color: var(--bgheader);
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--subtitle);
+    border: 1px solid rgb(99 79 62 / 63%);
+    transition:  0.2s ;
+    box-shadow: 1px 1px 40px #0000006e;
+    
+}
+
+header .icon-sun{
+   color :rgb(255, 165, 0);
+}
+
+header .icon-menu:hover , header .mode:hover{
+    color: var(--title);
+    border: 1px solid rgba(244, 165, 96);
+}
+header .icon-close{
+    font-size: 1.3rem;
+    color: var(--subtitle);
+    transition: 0.3s;
+}
+header .icon-close:hover{
+    font-size: 1.6rem;
+    color: crimson;
+    rotate: 180deg;
+}
+
+
+
+
+
+/* =======================
+   4-responsive design
+========================== */
+
+@media (width < 700px) {
+    header nav{
+        display: none;
+    }
+    header .menu{
+        display: block;
+    }
+}
